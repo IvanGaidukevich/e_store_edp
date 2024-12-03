@@ -1,0 +1,19 @@
+{% extends "shop/base.html" %}
+{% block title %}Логин{% endblock %}
+
+
+{% block content %}
+    <div>
+        <form method="post" class="order-form">
+            {{ form.as_p }}
+            <p><input type="submit" value="Войти"></p>
+            {% csrf_token %}
+
+        </form>
+    <p>Зарегистрироваться можно <a href="{% url "accounts:register_view" %}">здесь</a></p>
+    </div>
+    <p>
+    </p>
+{% endblock %}
+
+

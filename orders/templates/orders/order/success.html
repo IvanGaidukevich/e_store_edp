@@ -1,0 +1,7 @@
+{% extends "shop/base.html" %}
+
+{% block content %}
+<h1>Поздравляем!</h1>
+    <p>Заказ под номером <strong>{{ order.id }}</strong> оформлен!</p>
+    <p><a href="{% url 'accounts:profile_view' %}">Назад</a></p>
+{% endblock %}

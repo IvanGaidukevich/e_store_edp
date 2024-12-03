@@ -1,0 +1,15 @@
+{% extends "shop/base.html" %}
+{% block title %}Добавления адреса доставки{% endblock %}
+
+
+{% block content %}
+    <div>
+        <h1>Добавить адрес доставки</h1>
+        <form method="post" class="order-form">
+
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Сохранить адрес">
+        </form>
+    </div>
+{% endblock %}

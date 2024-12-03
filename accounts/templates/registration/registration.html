@@ -1,0 +1,13 @@
+{% extends "shop/base.html" %}
+
+{% block title %}Регистрация{% endblock %}
+{%  block content %}
+    <h1>Регистрация</h1>
+    <div>
+    <form method="post"  class="order-form">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+    </div>
+{% endblock %}
