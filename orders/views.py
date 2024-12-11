@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from cart.cart import Cart
 from orders.forms import OrderCreateForm
 from orders.models import OrderItem, Order
-from django.contrib.auth.decorators import login_required  # new
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from django.utils import timezone
 
 
 @login_required
@@ -21,6 +23,8 @@ def order_create(request):
                     price=item['price'],
                     quantity=item['quantity']
                 )
+
+
             cart.clear()
             return render(request, 'orders/order/success.html', {'order': order})
     else:

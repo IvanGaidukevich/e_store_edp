@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User # new
 from shop.models import Product
 from accounts.models import Address
+from coupons.models import Coupon
 
 
 ORDER_STATUS_CHOICES = (

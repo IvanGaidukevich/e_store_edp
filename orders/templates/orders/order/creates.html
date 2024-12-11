@@ -11,6 +11,16 @@
     <p>Всего: {{ cart.get_total_price }} $</p>
     </div>
 
+    <!-- Форма для применения купона -->
+<div>
+    <h2>Применить купон</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ coupon_apply_form.as_p }}
+        <button type="submit">Применить</button>
+    </form>
+</div>
+
     <form method="post" class="order-form">
         {{ form.as_p }}
         <p><input type="submit" value="Оформить заказ"></p>
